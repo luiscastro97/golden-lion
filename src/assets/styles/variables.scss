@@ -1,0 +1,12 @@
+// Definición de los colores utilizados en el proyecto
+$color-black: #000000; // Color negro para texto y fondos
+$color-gold: #FFD700; // Color dorado para resaltar elementos importantes
+$color-white: #FFFFFF; // Color blanco para texto o fondos claros
+
+// Estilos globales para el body de la página
+body {
+    font-family: 'Arial', sans-serif; // Establece la tipografía global para el texto
+    margin: 0; // Elimina el margen predeterminado del navegador
+    padding: 0; // Elimina el padding (relleno) predeterminado del navegador
+    color: $color-black; // Establece el color del texto como negro
+}

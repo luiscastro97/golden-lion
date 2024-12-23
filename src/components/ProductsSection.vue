@@ -30,35 +30,30 @@ export default {
         {
           name: 'Anillo de Diamantes',
           description: 'Un anillo elegante con diamantes brillantes, ideal para ocasiones especiales.',
-          // Ruta de la imagen del producto
           image: require('@/assets/images/anillo.jpg'),
           price: '$70,000'
         },
         {
           name: 'Cadena de Oro',
           description: 'Cadena de oro de 18 kilates perfecta para una ocasión especial.',
-          // Ruta de la imagen del producto
           image: require('@/assets/images/cadena.jpg'),
           price: '$390,000'
         },
         {
-          name: 'aretes de oro',
-          description: 'aretes de oro perfecta para toda ocacion.',
-          // Ruta de la imagen del producto
+          name: 'Aretes de Oro',
+          description: 'Aretes de oro perfectos para toda ocasión.',
           image: require('@/assets/images/arestes.jpg'),
           price: '$390,000'
         },
         {
-          name: 'pulsera de oro',
-          description: 'pulsera de oro perfecta para resaltar tu elegancia.',
-          // Ruta de la imagen del producto
+          name: 'Pulsera de Oro',
+          description: 'Pulsera de oro perfecta para resaltar tu elegancia.',
           image: require('@/assets/images/pulsera.jpg'),
           price: '$390,000'
         },
         {
-          name: 'pulsera de oro',
-          description: 'pulsera de oro perfecta para resaltar tu elegancia.',
-          // Ruta de la imagen del producto
+          name: 'Reloj Dorado',
+          description: 'Reloj dorado ideal para complementar tu look.',
           image: require('@/assets/images/RELOJ_ONOLA-DORADO.jpg'),
           price: '$390,000'
         },
@@ -71,56 +66,75 @@ export default {
 <style scoped>
 /* Estilos generales para la sección de productos */
 .products {
-  /* Espaciado interno */
   padding: 2rem;
-  /* Fondo negro para resaltar los productos dorados */
   background-color: #000;
-  /* Texto blanco */
   color: #fff;
-  /* Centra el texto */
   text-align: center;
 }
 
-/* Estilos para la lista de productos */
+/* Estilos para la lista de productos utilizando grid */
 .product-list {
-  /* Usamos una cuadrícula para mostrar los productos en varias columnas */
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-  gap: 1.5rem; /* Espaciado entre los productos */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-/* Estilos para cada producto */
+/* Estilos para cada tarjeta de producto */
 .product {
-  /* Fondo dorado para resaltar los productos */
   background-color: #ffd700;
-  /* Espaciado interno */
   padding: 1rem;
-  /* Bordes redondeados */
   border-radius: 8px;
-  width: auto;
-  height: auto;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Estilos para la imagen del producto */
 .product-image {
-  /* La imagen ocupa todo el ancho del contenedor */
-  width: 50%;
-  /* Mantiene la proporción de la imagen */
+  width: 80%; /* Ajustamos el tamaño de la imagen */
+  max-width: 200px; /* Máximo tamaño de la imagen */
   height: auto;
-  /* Bordes redondeados */
   border-radius: 5px;
+  margin-bottom: 1rem;
 }
 
-/* Estilos para el precio del producto */
-.price {
-  /* Tamaño de la fuente */
+/* Estilo para el nombre del producto */
+h3 {
+  margin: 0.5rem 0;
   font-size: 1.2rem;
-  /* Hacemos que el precio sea más destacado */
+}
+
+/* Estilo para la descripción del producto */
+p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+/* Estilos para el precio */
+.price {
+  font-size: 1.2rem;
   font-weight: bold;
-  /* Color del precio (negro) */
   color: #000;
-  /* Espaciado superior para separar el precio de la descripción */
   margin-top: 0.5rem;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* En pantallas pequeñas (móviles), cambiamos a una sola columna */
+  .product-list {
+    grid-template-columns: 1fr; /* Una columna por producto */
+  }
+
+  /* Ajustamos el tamaño de las imágenes */
+  .product-image {
+    width: 90%; /* Imagen más grande en dispositivos móviles */
+  }
+
+  /* Reducir el padding y margenes en móviles */
+  .products {
+    padding: 1rem;
+  }
 }
 </style>

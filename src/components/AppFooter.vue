@@ -9,7 +9,6 @@
 <script>
 // Definición del componente de Vue.js
 export default {
-  // Nombre del componente, utilizado para referirse a él en otros archivos
   name: "AppFooter",
 };
 </script>
@@ -17,16 +16,28 @@ export default {
 <style scoped>
 /* Estilos específicos para el componente footer */
 .footer {
-  /* Alinea el texto al centro */
-  text-align: center;
-  
-  /* Agrega un relleno alrededor del contenido */
-  padding: 1rem;
-  
-  /* Establece un fondo de color negro para el pie de página */
-  background-color: #000;
-  
-  /* Establece el color del texto como blanco */
-  color: #fff;
+  text-align: center; /* Alinea el texto al centro */
+  padding: 1rem; /* Agrega un relleno alrededor del contenido */
+  background-color: #000; /* Establece un fondo de color negro para el pie de página */
+  color: #fff; /* Establece el color del texto como blanco */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    padding: 1rem 0.5rem; /* Reduce el relleno en pantallas pequeñas */
+  }
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 1024px) {
+  .footer {
+    font-size: 1.2rem; /* Aumenta el tamaño del texto en pantallas grandes */
+    padding: 2rem 4rem; /* Aumenta el relleno en pantallas grandes */
+  }
 }
 </style>

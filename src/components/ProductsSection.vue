@@ -22,6 +22,7 @@
 <script>
 // Definición del componente 'ProductsSection'
 export default {
+  // Definición de los datos del componente, incluyendo los productos
   data() {
     return {
       // Lista de productos
@@ -29,30 +30,35 @@ export default {
         {
           name: 'Anillo de Diamantes',
           description: 'Un anillo elegante con diamantes brillantes, ideal para ocasiones especiales.',
+          // Ruta de la imagen del producto
           image: require('@/assets/images/anillo.jpg'),
           price: '$70,000'
         },
         {
           name: 'Cadena de Oro',
           description: 'Cadena de oro de 18 kilates perfecta para una ocasión especial.',
+          // Ruta de la imagen del producto
           image: require('@/assets/images/cadena.jpg'),
           price: '$390,000'
         },
         {
-          name: 'Aretes de Oro',
-          description: 'Aretes de oro perfectos para toda ocasión.',
+          name: 'aretes de oro',
+          description: 'aretes de oro perfecta para toda ocacion.',
+          // Ruta de la imagen del producto
           image: require('@/assets/images/arestes.jpg'),
           price: '$390,000'
         },
         {
-          name: 'Pulsera de Oro',
-          description: 'Pulsera de oro perfecta para resaltar tu elegancia.',
+          name: 'pulsera de oro',
+          description: 'pulsera de oro perfecta para resaltar tu elegancia.',
+          // Ruta de la imagen del producto
           image: require('@/assets/images/pulsera.jpg'),
           price: '$390,000'
         },
         {
-          name: 'Reloj Onola Dorado',
-          description: 'Reloj Onola de oro para complementar tu look.',
+          name: 'pulsera de oro',
+          description: 'pulsera de oro perfecta para resaltar tu elegancia.',
+          // Ruta de la imagen del producto
           image: require('@/assets/images/RELOJ_ONOLA-DORADO.jpg'),
           price: '$390,000'
         },
@@ -65,63 +71,56 @@ export default {
 <style scoped>
 /* Estilos generales para la sección de productos */
 .products {
+  /* Espaciado interno */
   padding: 2rem;
+  /* Fondo negro para resaltar los productos dorados */
   background-color: #000;
+  /* Texto blanco */
   color: #fff;
+  /* Centra el texto */
   text-align: center;
 }
 
 /* Estilos para la lista de productos */
 .product-list {
+  /* Usamos una cuadrícula para mostrar los productos en varias columnas */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-  gap: 1.5rem;
+  gap: 1.5rem; /* Espaciado entre los productos */
 }
 
 /* Estilos para cada producto */
 .product {
+  /* Fondo dorado para resaltar los productos */
   background-color: #ffd700;
+  /* Espaciado interno */
   padding: 1rem;
+  /* Bordes redondeados */
   border-radius: 8px;
   width: auto;
   height: auto;
-  text-align: center;
+  
 }
 
 /* Estilos para la imagen del producto */
 .product-image {
-  width: 100%;
+  /* La imagen ocupa todo el ancho del contenedor */
+  width: 50%;
+  /* Mantiene la proporción de la imagen */
   height: auto;
+  /* Bordes redondeados */
   border-radius: 5px;
 }
 
 /* Estilos para el precio del producto */
 .price {
+  /* Tamaño de la fuente */
   font-size: 1.2rem;
+  /* Hacemos que el precio sea más destacado */
   font-weight: bold;
+  /* Color del precio (negro) */
   color: #000;
+  /* Espaciado superior para separar el precio de la descripción */
   margin-top: 0.5rem;
-}
-
-/* Media query para pantallas pequeñas (max-width: 768px) */
-@media (max-width: 768px) {
-  .product-list {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
-  }
-}
-
-/* Media query para pantallas muy pequeñas (max-width: 480px) */
-@media (max-width: 480px) {
-  .product-list {
-    grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
-  }
-
-  .product {
-    padding: 0.5rem; /* Reducir el padding de los productos */
-  }
-
-  .price {
-    font-size: 1rem; /* Reducir el tamaño de la fuente del precio */
-  }
 }
 </style>

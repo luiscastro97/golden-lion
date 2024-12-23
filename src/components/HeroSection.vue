@@ -22,50 +22,27 @@ export default {
 
 /* Estilos para la sección Hero */
 .hero {
+  /* Centra el texto dentro de la sección */
   text-align: center;
+  /* Relleno generoso para darle espacio a la sección */
   padding: 4rem;
+  /* Color de fondo dorado para la sección */
   background-color: $color-gold;
+  /* Color blanco para el texto */
   color: $color-white;
 
   /* Estilos para el título (h1) */
   h1 {
+    /* Tamaño grande para el título */
     font-size: 3rem;
+    /* Espaciado debajo del título */
     margin-bottom: 1rem;
   }
 
   /* Estilos para el subtítulo (p) */
   p {
+    /* Tamaño de texto más pequeño que el del título */
     font-size: 1.5rem;
-  }
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .hero {
-    padding: 3rem 2rem; /* Reducir el padding en pantallas más pequeñas */
-  }
-
-  h1 {
-    font-size: 2.5rem; /* Reducir el tamaño del título */
-  }
-
-  p {
-    font-size: 1.2rem; /* Reducir el tamaño del subtítulo */
-  }
-}
-
-/* Media query para pantallas muy pequeñas (móviles en modo vertical) */
-@media (max-width: 480px) {
-  .hero {
-    padding: 2rem 1rem; /* Aumentar el espacio a los lados en dispositivos muy pequeños */
-  }
-
-  h1 {
-    font-size: 2rem; /* Hacer el título más pequeño en pantallas pequeñas */
-  }
-
-  p {
-    font-size: 1rem; /* Hacer el subtítulo más pequeño */
   }
 }
 </style>
